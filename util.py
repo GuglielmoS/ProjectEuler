@@ -60,6 +60,13 @@ def primes(n):
 
 	return primes
 	
+def eratostene(n):
+	""" Returns a list that contains all the primes numbers below n.
+		It uses the eratostene's method.
+	"""
+	sieve = range(2, n+1)
+	
+	
 def prime_factors(n):
 	""" Returns a list that contains all the prime factors of
 	    the number n.
