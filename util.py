@@ -12,7 +12,7 @@ def chronometer(function):
 	def decorated_function(*args, **kwargs):
 		start_time = time.time()
 		returned_value = function(*args, **kwargs)
-		print "[@] %s executed in %.4f seconds" % (function.func_name, 
+		print "[@] %s executed in %.4f seconds" % (function.func_name,
 												   time.time() - start_time)
 		return returned_value
 	return decorated_function
