@@ -35,7 +35,7 @@ def memoize(function):
 def is_prime(n):
 	""" Checks if the number n is prime.
 	    Return True in case of success, False otherwhise
-    """
+	"""
 	
 	if n <= 3:
 		return True
@@ -58,14 +58,7 @@ def primes(n):
 			primes.append(i)
 		i += 2
 
-	return primes
-	
-def eratostene(n):
-	""" Returns a list that contains all the primes numbers below n.
-		It uses the eratostene's method.
-	"""
-	sieve = range(2, n+1)
-	
+	return primes		
 	
 def prime_factors(n):
 	""" Returns a list that contains all the prime factors of
