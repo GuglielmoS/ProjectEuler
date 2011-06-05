@@ -115,5 +115,7 @@ def square(n):
 	return n*n
 	
 def last(vector):
+	""" Returns the last element of a list.
+	"""
 	return vector[-1]
 	
