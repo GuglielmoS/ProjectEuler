@@ -95,8 +95,8 @@ def lcm(a, b):
 	"""
 	return a * b // gcd(a, b)
 	
-	
-	
-	
-	
+def square(n):
+	""" Returns the square of the number n.
+	"""
+	return n*n
 	
