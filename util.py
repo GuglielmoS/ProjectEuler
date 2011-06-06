@@ -19,7 +19,7 @@ def chronometer(function):
 
 def memoize(function):
 	""" It's a decorator that allows to store previous results of
-	    the decorated function.
+		the decorated function.
 	"""
 	
 	cache = {}
@@ -34,7 +34,7 @@ def memoize(function):
 	
 def is_prime(n):
 	""" Checks if the number n is prime.
-	    Return True in case of success, False otherwhise
+		Return True in case of success, False otherwhise
 	"""
 	
 	if n <= 3:
@@ -76,19 +76,16 @@ def prime_factors(n):
 def factorize(n):
 	""" Returns a list that contains all factors
 	    of the number n.
-		The number is prime when the list contains only the number self.
 	"""
-	
 	factors = []
-	limit = int(sqrt(n))+1
-	for i in range(2, limit):
+	limit = n/2+1#int(sqrt(n)+1)
+	for i in range(1, limit):
 		if n % i == 0:
 			factors.append(i)
-			n /= i
 	
-	if len(factors) == 0:
+	if len(factors) == 1 and n != 1:
 		factors.append(n)
-	
+		
 	return factors
 			
 def is_palindrome(n):
