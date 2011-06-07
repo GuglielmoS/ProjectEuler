@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
 import time
+import operator
+
 from math import sqrt
 from math import ceil
 
@@ -130,3 +132,10 @@ def last(vector):
 	"""
 	return vector[-1]
 	
+def factorial(n):
+	""" Return the factorial of the number n """
+	return reduce(operator.mul, range(1, n+1))
+
+def digits_sum(n):
+	""" Returns the sum of all the digits of the number n """
+	return sum(map(int, list(str(n))))
