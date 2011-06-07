@@ -72,13 +72,13 @@ def prime_factors(n):
 			p_factors.append(i)
 
 	return p_factors
-	
+
 def factorize(n):
 	""" Returns a list that contains all factors
 	    of the number n.
 	"""
 	factors = []
-	limit = n/2+1#int(sqrt(n)+1)
+	limit = (n/2) + 1
 	for i in range(1, limit):
 		if n % i == 0:
 			factors.append(i)
@@ -87,6 +87,20 @@ def factorize(n):
 		factors.append(n)
 		
 	return factors
+
+def count_factors(n):
+	""" Returns the number of factors of the number n """
+	
+	if (n == 1):
+		return 1
+	
+	count = 0
+	limit = int(n ** 0.5) + 1
+	for i in range(1, limit):
+		if n % i == 0:
+			count += 2			
+		
+	return count
 			
 def is_palindrome(n):
 	""" Returns True if the number n is palindrome, False otherwise
