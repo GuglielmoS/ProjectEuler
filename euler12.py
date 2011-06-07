@@ -21,14 +21,13 @@ from util import chronometer
 from util import count_factors
 
 @chronometer
-def problem_12(threeshold):
-	i = 1
+def problem_12():
+	n = 1
 	triangle_number = 0
 	while True:
-		triangle_number += i
-		#print triangle_number, ':',len(factorize(triangle_number)), ':', '-'.join(map(str, factorize(triangle_number)))
-		if count_factors(triangle_number) >= threeshold:
+		triangle_number += n
+		if count_factors(triangle_number) >= 500:
 			return triangle_number
-		i += 1
+		n += 1
 
-print problem_12(500)
+print problem_12()
