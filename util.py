@@ -80,14 +80,11 @@ def factorize(n):
 	    of the number n.
 	"""
 	factors = []
-	limit = (n/2) + 1
+	limit = int(ceil((n / 2) + 1))
 	for i in range(1, limit):
 		if n % i == 0:
 			factors.append(i)
 	
-	if len(factors) == 1 and n != 1:
-		factors.append(n)
-		
 	return factors
 
 def count_factors(n):
@@ -139,3 +136,11 @@ def factorial(n):
 def digits_sum(n):
 	""" Returns the sum of all the digits of the number n """
 	return sum(map(int, list(str(n))))
+	
+def is_amicable(n):
+	""" Returns True if n is an amicable number, False otherwise. """
+	factors_sum = sum(factorize(n))	
+	if n != factors_sum and n == sum(factorize(factors_sum)):
+		return True
+
+	return False
