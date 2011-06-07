@@ -7,17 +7,12 @@
 # exceed four million, find the sum of the even-valued terms.
 
 from util import chronometer
-
-def fibonacci():
-	n1, n2 = 0, 1
-	while True:
-		yield n1
-		n1, n2 = n2, n1 + n2
+from util import fibonacci_generator
 
 @chronometer	
 def problem_2():
 	total_sum = 0
-	f = fibonacci()
+	f = fibonacci_generator()
 	exceed_four_million = False
 	while not exceed_four_million:
 		next_number = f.next()

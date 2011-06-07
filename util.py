@@ -144,3 +144,10 @@ def is_amicable(n):
 		return True
 
 	return False
+	
+def fibonacci_generator():
+	""" It is a generator of the fibonacci sequence. """
+	n1, n2 = 0, 1
+	while True:
+		yield n1
+		n1, n2 = n2, n1 + n2
