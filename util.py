@@ -62,6 +62,16 @@ def primes(n):
 
 	return primes		
 	
+def primes_below(limit):
+	""" Return all the primes number below limit. """ 
+	all_primes = [2]
+	
+	for n in range(3, limit, 2):
+		if is_prime(n):
+			all_primes.append(n)
+			
+	return all_primes
+	
 def prime_factors(n):
 	""" Returns a list that contains all the prime factors of
 	    the number n.
@@ -151,3 +161,7 @@ def fibonacci_generator():
 	while True:
 		yield n1
 		n1, n2 = n2, n1 + n2
+		
+def is_abundant(n):
+	""" Return true if n is an abundant number, false otherwise """
+	return sum(factorize(n)) > n
