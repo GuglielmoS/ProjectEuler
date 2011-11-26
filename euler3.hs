@@ -13,3 +13,5 @@ primeFactors :: Int -> [Int]
 primeFactors n = filter isPrime (factors n)
 
 problem3 = last (primeFactors 600851475143)
+
+main = do print problem3
