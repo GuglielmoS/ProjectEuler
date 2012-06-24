@@ -5,7 +5,7 @@
 #   3 + 3 + 5 + 4 + 4 = 19 
 # letters used in total.
 # If all the numbers from 1 to 1000 (one thousand) inclusive
-#were written out in words, how many letters would be used?
+# were written out in words, how many letters would be used?
 #
 # NOTE: Do not count spaces or hyphens. 
 # For example, 342 (three hundred and forty-two) contains 23 letters
@@ -21,7 +21,7 @@ from util import chronometer
 
 def length_of(n):
     """
-        Returns the lenght of the number in n when it is written 
+        Returns the length of the number n when it is written 
         as word.
 
         for example:
@@ -46,18 +46,18 @@ def length_of(n):
 
         n %= 100;
         if n <= 19:
-            return tmp_len + numTo19[n];
+            return tmp_len + numTo19[n]
         elif n % 10 == 0:
-            return tmp_len + numTo99[(n/10)-2];
+            return tmp_len + numTo99[(n/10)-2]
         else:
-            return tmp_len + numTo99[(n/10)-2] + numTo19[n%10];
+            return tmp_len + numTo99[(n/10)-2] + numTo19[n%10]
     elif n <= 19:
-        return numTo19[n];
+        return numTo19[n]
     elif n < 100:
         if n % 10 == 0:
-            return numTo99[(n/10)-2];
+            return numTo99[(n/10)-2]
         else:
-            return numTo99[(n/10)-2] + numTo19[n%10];
+            return numTo99[(n/10)-2] + numTo19[n%10]
     else:
         return 0;
 
