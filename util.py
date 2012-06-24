@@ -194,3 +194,9 @@ def simplify_fraction(f):
     
     return (f[0]/f_gcd, f[1]/f_gcd)    
 
+def digits(n):
+    """
+        Returns a list that contains all the digits of the number 'n'.
+    """
+    return map(int, str(n))
+
