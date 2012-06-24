@@ -2,6 +2,7 @@
 
 import time
 import operator
+import itertools
 
 from math import sqrt
 from math import ceil
@@ -165,3 +166,31 @@ def fibonacci_generator():
 def is_abundant(n):
 	""" Return true if n is an abundant number, false otherwise """
 	return sum(factorize(n)) > n
+	
+def combinations(iterable):
+	""" Return a list containing all the combinations of iterable element."""
+	combinations_list = []
+	for i in range(1, len(iterable)+1):
+		combinations_list.append(list(itertools.combinations(iterable, i)))
+	
+	return combinations_list
+	
+def combinations_with_replacement(iterable):
+	""" Return a list containing all the combinations with replacement 
+		of iterable element."""
+	combinations_list = []
+	for i in range(1, len(iterable)+1):
+		combinations_list.append(list(itertools.combinations_with_replacement(iterable, i)))
+	
+	return combinations_list
+	
+def simplify_fraction(f):
+    """ 
+        Assuming that f is a fraction, it returns the simplified version.
+        So f should be a tuple of two elements, in which the first is
+        the numerator and the second is the denominator.
+    """
+    f_gcd = gcd(f[0], f[1])
+    
+    return (f[0]/f_gcd, f[1]/f_gcd)    
+
